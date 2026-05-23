@@ -1,0 +1,13 @@
+# Editor / IDE configuration files
+.claude/
+.superpowers/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and system files
+*.log
+.vercel/
+node_modules/

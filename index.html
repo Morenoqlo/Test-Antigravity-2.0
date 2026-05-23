@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Rojas | Adesign - Diseñador Gráfico & Creativo Digital</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portafolio profesional de Alexander Rojas (Adesign). Especializado en identidad visual, empaques memorables, contenido digital y landing pages impulsadas con IA.">
+    <meta name="keywords" content="Alexander Rojas, Adesign, Portafolio Diseñador, Diseño Gráfico, Identidad Visual, Packaging, Ckacktur, Elemis, Vaiss, Antofagasta, Landing Pages, Diseño Moderno">
+    <meta name="author" content="Alexander Rojas">
+    
+    <!-- OpenGraph Meta Tags (Para redes sociales) -->
+    <meta property="og:title" content="Alexander Rojas | Adesign - Diseñador Gráfico & Creativo Digital">
+    <meta property="og:description" content="Explora el portafolio de Adesign. Identidad visual, empaques conceptuales, contenido digital y landing pages de alto impacto.">
+    <meta property="og:image" content="assets/project_vaiss.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome (iconos premium) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Fondo dinámico con gradiente radial HSL -->
+    <div class="glow-bg"></div>
+
+    <!-- Barra de Navegación Glassmorphic -->
+    <header class="glass-nav" id="main-header">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <img src="assets/logo.png" alt="Adesign Logo" class="logo-img">
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active" id="link-hero">Inicio</a>
+                <a href="#about" class="nav-link" id="link-about">Sobre Mí</a>
+                <a href="#projects" class="nav-link" id="link-projects">Proyectos</a>
+                <a href="#experience" class="nav-link" id="link-experience">Trayectoria</a>
+                <a href="#skills" class="nav-link" id="link-skills">Especialidad</a>
+                <a href="#contact" class="nav-link" id="link-contact">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Botón de Modo Claro / Oscuro -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon icon-dark" id="theme-icon-dark"></i>
+                    <i class="fa-solid fa-sun icon-light" id="theme-icon-light" style="display: none;"></i>
+                </button>
+                
+                <!-- Botón menú hamburguesa en móvil -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú móvil colapsable -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#hero" class="mobile-nav-link" id="mob-link-hero">Inicio</a>
+        <a href="#about" class="mobile-nav-link" id="mob-link-about">Sobre Mí</a>
+        <a href="#projects" class="mobile-nav-link" id="mob-link-projects">Proyectos</a>
+        <a href="#experience" class="mobile-nav-link" id="mob-link-experience">Trayectoria</a>
+        <a href="#skills" class="mobile-nav-link" id="mob-link-skills">Especialidad</a>
+        <a href="#contact" class="mobile-nav-link" id="mob-link-contact">Contacto</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- SECCIÓN 1: HERO -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-overlay" style="background-image: url('assets/hero-bg.png');"></div>
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="badge" id="hero-badge">Disponible para nuevos proyectos</div>
+                    <h1 class="hero-title" id="hero-title">
+                        Diseño Visual de <span class="gradient-text">Alto Impacto</span> e Identidad de Marca
+                    </h1>
+                    <p class="hero-subtitle" id="hero-subtitle">
+                        Soy <span class="highlight-text">Alexander Rojas</span>, el creativo detrás de <strong>Adesign</strong>. Creo marcas memorables, piezas digitales a medida y soluciones web funcionales que potencian y profesionalizan la comunicación de los negocios.
+                    </p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="https://wa.me/56942543637?text=Hola%20Alexander,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto." target="_blank" class="btn btn-primary btn-whatsapp" id="btn-hero-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Hablemos por WhatsApp
+                        </a>
+                        <a href="#projects" class="btn btn-secondary" id="btn-hero-projects">
+                            Ver proyectos <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <!-- Datos rápidos de posicionamiento -->
+                    <div class="hero-stats" id="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">Real</span>
+                            <span class="stat-label">Clientes & Difusión</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3D</span>
+                            <span class="stat-label">Modelado & Packaging</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">IA+Web</span>
+                            <span class="stat-label">Soluciones Modernas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual-content">
+                    <!-- Tarjeta interactiva de código del diseñador -->
+                    <div class="glass-card hero-card" id="hero-interactive-card">
+                        <div class="hero-card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title">proceso_creativo.flow</span>
+                        </div>
+                        <div class="hero-card-body">
+                            <div class="process-step">
+                                <div class="process-step-num">01</div>
+                                <div class="process-step-content">
+                                    <span class="process-step-label">Concepto & Brief</span>
+                                    <span class="process-step-desc">Investigación y definición estratégica</span>
+                                </div>
+                            </div>
+                            <div class="process-connector"></div>
+                            <div class="process-step">
+                                <div class="process-step-num">02</div>
+                                <div class="process-step-content">
+                                    <span class="process-step-label">Boceto & Dirección</span>
+                                    <span class="process-step-desc">Exploración visual y selección de ruta</span>
+                                </div>
+                            </div>
+                            <div class="process-connector"></div>
+                            <div class="process-step">
+                                <div class="process-step-num">03</div>
+                                <div class="process-step-content">
+                                    <span class="process-step-label">Producción Digital</span>
+                                    <span class="process-step-desc">Vectorización, 3D y composición final</span>
+                                </div>
+                            </div>
+                            <div class="process-connector"></div>
+                            <div class="process-step">
+                                <div class="process-step-num">04</div>
+                                <div class="process-step-content">
+                                    <span class="process-step-label">Entrega & Manual</span>
+                                    <span class="process-step-desc">Archivos maestros y guía de aplicación</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down" id="scroll-down" aria-label="Ir a sección Sobre Mí">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- SECCIÓN 2: SOBRE MÍ -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Sobre Mí</span>
+                    <h2 class="section-title">El Creativo Detrás del Diseño</h2>
+                    <p class="section-subtitle">Fascinado por la armonía del espacio, la fuerza del branding y la innovación digital.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Imagen de perfil real -->
+                    <div class="about-image-wrapper">
+                        <div class="glass-card image-card" id="about-image-card">
+                            <img src="assets/profile.png" alt="Alexander Rojas - Perfil" class="about-image" id="img-profile">
+                            <div class="image-overlay-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bio detallada -->
+                    <div class="about-info-wrapper">
+                        <h3 class="about-headline">Hola, soy Alexander</h3>
+                        <p class="about-description">
+                            Como diseñador gráfico, me apasiona conceptualizar y diseñar marcas, empaques, piezas de comunicación digital y soluciones web estructuradas. Mi enfoque combina la rigurosidad del diseño clásico con el poder de herramientas modernas de Inteligencia Artificial para ofrecer marcas a la vanguardia.
+                        </p>
+                        <p class="about-description">
+                            Creo experiencias visuales minimalistas, editoriales, profesionales y modernas. Presto máxima atención al balance tipográfico, el correcto uso de los espacios, la selección de paletas cromáticas y la presentación impecable de cada entregable.
+                        </p>
+                        
+                        <div class="about-features">
+                            <div class="feature-box">
+                                <i class="fa-solid fa-fingerprint feature-icon"></i>
+                                <div>
+                                    <h4>Identidad Visual & Branding</h4>
+                                    <p>Creación de logotipos, manuales de normas gráficas y papelería corporativa que transmiten solidez.</p>
+                                </div>
+                            </div>
+                            <div class="feature-box">
+                                <i class="fa-solid fa-wand-magic-sparkles feature-icon"></i>
+                                <div>
+                                    <h4>Dirección Visual con IA</h4>
+                                    <p>Uso estratégico de IA generativa para la creación de mockups avanzados e ilustraciones disruptivas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-social-group">
+                            <a href="https://www.behance.net/alexandrojasp1" target="_blank" class="btn btn-secondary btn-social-about" id="btn-about-behance">
+                                <i class="fa-brands fa-behance"></i> Behance
+                            </a>
+                            <a href="https://www.instagram.com/_a.rojass_/" target="_blank" class="btn btn-secondary btn-social-about" id="btn-about-instagram">
+                                <i class="fa-brands fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://www.linkedin.com/in/alexander-rojas-pe%C3%B1a-1a4849293/" target="_blank" class="btn btn-secondary btn-social-about" id="btn-about-linkedin">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PROYECTOS (Con Filtrado Real) -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Proyectos Destacados</span>
+                    <h2 class="section-title">Trabajos y Casos de Éxito</h2>
+                    <p class="section-subtitle">Una vitrina de piezas diseñadas con rigor técnico y propósito estratégico.</p>
+                </div>
+
+                <!-- Filtros reales -->
+                <div class="projects-filter" id="projects-filter-container">
+                    <button class="filter-btn active" data-filter="all" id="btn-filter-all">Todos</button>
+                    <button class="filter-btn" data-filter="real" id="btn-filter-real">Clientes Reales</button>
+                    <button class="filter-btn" data-filter="academic" id="btn-filter-academic">Proyectos Académicos</button>
+                    <button class="filter-btn" data-filter="specialty" id="btn-filter-specialty">Especialidad</button>
+                </div>
+
+                <!-- Grilla de Proyectos (8 proyectos) -->
+                <div class="projects-grid" id="projects-grid">
+                    
+                    <!-- Proyecto 1: Proyecto Web Vaiss -->
+                    <div class="project-card glass-card" data-category="specialty" id="project-card-vaiss">
+                        <div class="project-image-container">
+                            <img src="assets/project_vaiss.png" alt="Proyecto Web Vaiss" class="project-image">
+                            <div class="project-category-badge">Especialidad</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Proyecto Web Vaiss</h3>
+                            <p class="project-desc">Diseño de experiencia de usuario y desarrollo de una landing page orientada a conversión y reserva de citas con un panel de administración.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Diseño Web</span>
+                                <span class="tech-tag">Landing Page</span>
+                                <span class="tech-tag">Admin Panel</span>
+                                <span class="tech-tag">Conversion</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="vaiss">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2: Ckacktur -->
+                    <div class="project-card glass-card" data-category="academic" id="project-card-ckacktur">
+                        <div class="project-image-container">
+                            <img src="assets/project_ckacktur.png" alt="Ckacktur Packaging Cerveza" class="project-image">
+                            <div class="project-category-badge">Académico</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Ckacktur</h3>
+                            <p class="project-desc">Diseño de botella de cerámica inspirada en vasijas tradicionales atacameñas para sabores autóctonos de Rica-Rica y Chañar.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Packaging</span>
+                                <span class="tech-tag">Blender 3D</span>
+                                <span class="tech-tag">Dirección Visual</span>
+                                <span class="tech-tag">Sostenible</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="ckacktur">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3: ELEMIS -->
+                    <div class="project-card glass-card" data-category="academic" id="project-card-elemis">
+                        <div class="project-image-container">
+                            <img src="assets/project_elemis.png" alt="ELEMIS Identidad Visual" class="project-image">
+                            <div class="project-category-badge">Académico</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ELEMIS</h3>
+                            <p class="project-desc">Creación de identidad visual y manual de normas gráficas para una marca de automóviles autónomos y eléctricos inspirados en diosas griegas.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Branding</span>
+                                <span class="tech-tag">Identidad Visual</span>
+                                <span class="tech-tag">Manual de Marca</span>
+                                <span class="tech-tag">Illustrator</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="elemis">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 4: Mentholatum -->
+                    <div class="project-card glass-card" data-category="academic" id="project-card-mentholatum">
+                        <div class="project-image-container">
+                            <img src="assets/project_mentholatum.png" alt="Mentholatum Rebranding" class="project-image">
+                            <div class="project-category-badge">Académico</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Mentholatum</h3>
+                            <p class="project-desc">Propuesta contemporánea de rebranding del envase metálico clásico tipo cobre de Mentholatum, uniendo memoria y valor nostálgico.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Rebranding</span>
+                                <span class="tech-tag">Packaging</span>
+                                <span class="tech-tag">Diseño de Envase</span>
+                                <span class="tech-tag">Photoshop</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="mentholatum">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 5: Flyer Verano UA -->
+                    <div class="project-card glass-card" data-category="real" id="project-card-flyer">
+                        <div class="project-image-container">
+                            <img src="assets/project_flyer.png" alt="Flyer Verano UA" class="project-image">
+                            <div class="project-category-badge">Cliente Real</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Flyer Verano UA</h3>
+                            <p class="project-desc">Diseño editorial e informativo para dos piezas de difusión corporativa y comunitaria inclusiva para las escuelas de verano UA.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Flyer</span>
+                                <span class="tech-tag">Diseño Editorial</span>
+                                <span class="tech-tag">Difusión UA</span>
+                                <span class="tech-tag">Composición</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="flyer">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 6: LANDYCISS -->
+                    <div class="project-card glass-card" data-category="real" id="project-card-landyciss">
+                        <div class="project-image-container">
+                            <img src="assets/project_landyciss.jpg" alt="LANDYCISS Logo Deportivo" class="project-image">
+                            <div class="project-category-badge">Cliente Real</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">LANDYCISS</h3>
+                            <p class="project-desc">Logotipo emblemático para marca deportiva que combina las iniciales LC con referencias a dragones y corona de Game of Thrones.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Logo</span>
+                                <span class="tech-tag">Marca Deportiva</span>
+                                <span class="tech-tag">Heráldica</span>
+                                <span class="tech-tag">Illustrator</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="landyciss">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 7: Lo que no se Sube -->
+                    <div class="project-card glass-card" data-category="real" id="project-card-podcast">
+                        <div class="project-image-container">
+                            <img src="assets/project_podcast.png" alt="Lo que no se Sube Podcast" class="project-image">
+                            <div class="project-category-badge">Cliente Real</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Lo que no se Sube</h3>
+                            <p class="project-desc">Diseño de logotipo e identidad visual para un podcast de influencer local, optimizado para difusión en plataformas digitales y redes sociales.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Logotipo</span>
+                                <span class="tech-tag">Podcast</span>
+                                <span class="tech-tag">Redes Sociales</span>
+                                <span class="tech-tag">Contenido</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="podcast">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 8: Concursos Aguas Antofagasta -->
+                    <div class="project-card glass-card" data-category="real" id="project-card-concursos">
+                        <div class="project-image-container">
+                            <img src="assets/project_aguas_18sept_1.jpg" alt="Concursos Aguas Antofagasta" class="project-image">
+                            <div class="project-category-badge">Cliente Real</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Concursos Aguas Antofagasta</h3>
+                            <p class="project-desc">Campañas y carruseles interactivos de Instagram para festividades de Aguas Antofagasta (18 de Septiembre, Halloween y Verano).</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Social Media</span>
+                                <span class="tech-tag">Carrusel</span>
+                                <span class="tech-tag">Ilustración AI</span>
+                                <span class="tech-tag">Interacción</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn-project-view" data-project="concursos">
+                                    Explorar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: TRAYECTORIA / TIMELINE -->
+        <section id="experience" class="experience-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Experiencia</span>
+                    <h2 class="section-title">Experiencia</h2>
+                    <p class="section-subtitle">Empresas, proyectos y formación que han marcado mi camino.</p>
+                </div>
+
+                <div class="timeline" id="experience-timeline">
+                    
+                    <!-- Timeline Item 1: Aguas Antofagasta (Junio 2025 - Abril 2026) -->
+                    <div class="timeline-item" id="timeline-item-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Junio 2025 – Abril 2026</span>
+                            <h3 class="timeline-role">Asistente Profesional de Comunicaciones e Identidad</h3>
+                            <h4 class="timeline-company"><i class="fa-solid fa-water"></i> Aguas Antofagasta — Antofagasta, Chile</h4>
+                            <ul class="timeline-list-details" style="list-style: none; padding-left: 0; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Diseñé piezas gráficas y contenido digital para redes corporativas, comunicación interna y campañas informativas, fortaleciendo la coherencia visual de la marca.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Gestioné publicaciones para Instagram, LinkedIn, X y canales internos, adaptando mensajes institucionales a formatos claros, visuales y cercanos.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Desarrollé material gráfico para campañas educativas, comunitarias y medioambientales, aportando a la comunicación visual de actividades en terreno.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Produje registros fotográficos, edición de imágenes y apoyo audiovisual para eventos, activaciones y contenidos digitales de la organización.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Implementé lineamientos de identidad corporativa en piezas y soportes comunicacionales, contribuyendo a una gestión de marca consistente.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: Aguas Antofagasta Práctica (Abril 2025 - Junio 2025) -->
+                    <div class="timeline-item" id="timeline-item-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Abril 2025 – Junio 2025</span>
+                            <h3 class="timeline-role">Práctica Profesional en Diseño Gráfico y Comunicaciones</h3>
+                            <h4 class="timeline-company"><i class="fa-solid fa-graduation-cap"></i> Aguas Antofagasta — Antofagasta, Chile</h4>
+                            <ul class="timeline-list-details" style="list-style: none; padding-left: 0; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Diseñé piezas gráficas para contenidos digitales e internos, aplicando criterios de identidad corporativa, orden visual y comunicación institucional.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Desarrollé publicaciones para redes sociales y campañas, adaptando información técnica o corporativa a formatos comprensibles para la comunidad.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Produje material visual para actividades y campañas, contribuyendo al desarrollo de contenidos gráficos alineados con la marca.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: Club Deportivo de Cheerleading (Enero 2023 - Mayo 2023) -->
+                    <div class="timeline-item" id="timeline-item-3">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">Enero 2023 – Mayo 2023</span>
+                            <h3 class="timeline-role">Diseñador Gráfico</h3>
+                            <h4 class="timeline-company"><i class="fa-solid fa-people-group"></i> Club Deportivo de Cheerleading — Antofagasta, Chile</h4>
+                            <ul class="timeline-list-details" style="list-style: none; padding-left: 0; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Diseñé piezas gráficas para difusión deportiva, redes sociales y comunicación institucional del club, reforzando su presencia visual en medios digitales.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Desarrollé contenido digital para actividades, eventos y comunicaciones específicas, manteniendo una línea gráfica coherente y funcional.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-1); font-size: 0.8rem;"></i> Produje material visual adaptado a distintos formatos, apoyando la promoción de entrenamientos, convocatorias y actividades deportivas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4: Clubes Deportivos de Cheerleading (2019 - 2022) -->
+                    <div class="timeline-item" id="timeline-item-4">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2019 – 2022</span>
+                            <h3 class="timeline-role">Community Manager</h3>
+                            <h4 class="timeline-company"><i class="fa-solid fa-bullhorn"></i> Clubes Deportivos de Cheerleading — Antofagasta, Chile</h4>
+                            <ul class="timeline-list-details" style="list-style: none; padding-left: 0; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Gestioné redes sociales de clubes deportivos, organizando contenidos, publicaciones y comunicación con comunidades vinculadas al cheerleading.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Diseñé piezas digitales para difusión de actividades, competencias, entrenamientos y comunicaciones internas, fortaleciendo la identidad visual de los clubes.</li>
+                                <li style="position: relative; padding-left: 1.2rem;"><i class="fa-solid fa-circle-check" style="position: absolute; left: 0; top: 4px; color: var(--color-accent-2); font-size: 0.8rem;"></i> Produje contenido gráfico y audiovisual para redes sociales, apoyando la visibilidad de actividades deportivas y la interacción con la comunidad.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5: Educación & Certificación Internacional (2020 - 2025) -->
+                    <div class="timeline-item" id="timeline-item-edu">
+                        <div class="timeline-dot" style="border-color: var(--color-accent-3); background: var(--bg-secondary);"></div>
+                        <div class="timeline-content glass-card" style="border-color: rgba(255,255,255,0.15);">
+                            <span class="timeline-date">2020 – 2025</span>
+                            <h3 class="timeline-role">Formación Profesional & Reconocimientos</h3>
+                            <h4 class="timeline-company"><i class="fa-solid fa-award"></i> AIEP Antofagasta & NABA Milán</h4>
+                            
+                            <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary); font-size: 0.95rem;">
+                                <div style="border-left: 2px solid var(--color-accent-1); padding-left: 1rem;">
+                                    <strong style="color: var(--text-primary);">Diseño Gráfico Profesional</strong><br>
+                                    Instituto Profesional AIEP | 2022 – 2024 (Titulado en 2025)
+                                </div>
+                                <div style="border-left: 2px solid var(--color-accent-2); padding-left: 1rem;">
+                                    <strong style="color: var(--text-primary);">Técnico en Diseño Gráfico</strong><br>
+                                    Instituto Profesional AIEP | 2020 – 2022 (Titulado en 2025)
+                                </div>
+                                <div style="border-left: 2px solid var(--color-accent-1); padding-left: 1rem; background: rgba(255, 184, 0, 0.03); padding-top: 0.4rem; padding-bottom: 0.4rem; border-radius: 0 4px 4px 0;">
+                                    <strong style="color: var(--color-accent-1);"><i class="fa-solid fa-globe"></i> Certificación Internacional NABA</strong><br>
+                                    Nuova Accademia di Belle Arti, Milán, Italia.<br>
+                                    Especialización en <em>Diseño Gráfico y Dirección de Arte</em> — 2025.
+                                </div>
+                                <div style="border-left: 2px solid var(--color-accent-2); padding-left: 1rem;">
+                                    <strong style="color: var(--text-primary);">Certificación Comunicación para la Sostenibilidad</strong><br>
+                                    Acción Empresas — 2025.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: ESPECIALIDAD / HABILIDADES CUALITATIVAS -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Habilidades</span>
+                    <h2 class="section-title">Ecosistema Creativo</h2>
+                    <p class="section-subtitle">Mis competencias y herramientas clasificadas de forma cualitativa según mi experiencia real.</p>
+                </div>
+
+                <div class="skills-grid" id="skills-grid">
+                    
+                    <!-- Tarjeta 1: Avanzado (Amarillo Adesign) -->
+                    <div class="skills-card level-advanced glass-card">
+                        <span class="skills-level-badge">Avanzado</span>
+                        <h3><i class="fa-solid fa-award"></i> Diseño & Dirección</h3>
+                        <p class="skills-card-desc">Dominio experto de herramientas de creación digital y metodologías estratégicas de marca corporativa.</p>
+                        
+                        <div class="skills-items-container">
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-pen-nib"></i>
+                                <span>Identidad Corporativa & Branding</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-brands fa-square-js" style="font-family: 'Font Awesome 6 Brands' !important;"></i>
+                                <span>Adobe Illustrator & Photoshop</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-photo-film"></i>
+                                <span>Edición Audiovisual (Premiere & CapCut)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>Comunicación Visual & Dirección de Arte</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>Fotografía & Retoque (Lightroom & Canva)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Intermedio (Naranja Adesign) -->
+                    <div class="skills-card level-intermediate glass-card">
+                        <span class="skills-level-badge">Intermedio</span>
+                        <h3><i class="fa-solid fa-cube"></i> Innovación & 3D</h3>
+                        <p class="skills-card-desc">Herramientas de vanguardia aplicadas a modelado, prototipos web y procesos asistidos por inteligencia artificial.</p>
+                        
+                        <div class="skills-items-container">
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-box"></i>
+                                <span>Blender 3D (Modelado & Packaging)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-figma"></i>
+                                <span>Figma (Mockups, UX/UI & Prototipado)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span>IA Generativa aplicada al Diseño</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-video"></i>
+                                <span>After Effects (Motion Graphics & Reels)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Básico & En Desarrollo (Plata/Gris) -->
+                    <div class="skills-card level-basic glass-card">
+                        <span class="skills-level-badge">En Desarrollo</span>
+                        <h3><i class="fa-solid fa-code"></i> Web & Despliegue</h3>
+                        <p class="skills-card-desc">Conocimientos técnicos de maquetación y desarrollo front-end para implementar y publicar interfaces en vivo.</p>
+                        
+                        <div class="skills-items-container">
+                            <div class="skill-item-qualitative">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>HTML5 & CSS3 (Diseño Responsivo)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-brands fa-js"></i>
+                                <span>JavaScript (Lógica Básica e Interactividad)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-brands fa-wordpress"></i>
+                                <span>WordPress (Maquetación & CMS)</span>
+                            </div>
+                            <div class="skill-item-qualitative">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub & Netlify (Despliegue & Git)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: FORMULARIO DE CONTACTO -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Contacto</span>
+                    <h2 class="section-title">¿Hablamos sobre tu Marca?</h2>
+                    <p class="section-subtitle">Ponte en contacto para cotizar identidades, empaques, diseño de redes o tu próxima web.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Info de Contacto -->
+                    <div class="contact-info glass-card" id="contact-info-card">
+                        <h3>Contacto Directo</h3>
+                        <p>Escríbeme para agendar una consultoría de diseño o cotizar cualquiera de mis servicios creativos digitales. ¡Te responderé a la brevedad!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <div>
+                                    <span>Escríbeme por WhatsApp</span>
+                                    <a href="https://wa.me/56942543637?text=Hola%20Alexander,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto." target="_blank" class="contact-link"><strong>+56 9 4254 3637</strong></a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <i class="fa-regular fa-envelope"></i>
+                                <div>
+                                    <span>Correo Electrónico</span>
+                                    <a href="mailto:ale.viewers@gmail.com" class="contact-link"><strong>ale.viewers@gmail.com</strong></a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <span>Ubicación</span>
+                                    <strong>Antofagasta, Chile (Servicios remotos a todo el mundo)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="https://www.behance.net/alexandrojasp1" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                            <a href="https://www.linkedin.com/in/alexander-rojas-pe%C3%B1a-1a4849293/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/_a.rojass_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <form class="contact-form glass-card" id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Nombre Completo / Empresa</label>
+                            <input type="text" id="form-name" name="name" placeholder="Ej. Juan de Pérez Branding" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Correo de Contacto</label>
+                            <input type="email" id="form-email" name="email" placeholder="Ej. contacto@empresa.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-subject">¿Qué servicio necesitas?</label>
+                            <input type="text" id="form-subject" name="subject" placeholder="Ej. Logotipo / Landing Page / Identidad Completa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Cuéntame de tu proyecto</label>
+                            <textarea id="form-message" name="message" rows="4" placeholder="Háblame un poco de tu negocio y lo que buscas lograr..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-contact">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <div class="form-status-msg" id="form-status-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Adesign Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#hero">Inicio</a>
+                <a href="#about">Sobre Mí</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Adesign - Alexander Rojas. Todos los derechos reservados. Diseñado bajo exigentes pruebas técnicas de UI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- VENTANA MODAL PREMIUM DE DETALLE DE PROYECTO -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card glass-card">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-grid">
+                <!-- Zona Visual / Imagen Grande (Carrusel & Blur BG) -->
+                <div class="modal-visual">
+                    <div class="modal-visual-blur" id="modal-visual-blur"></div>
+                    <img id="modal-project-img" src="" alt="Detalle del Proyecto">
+                    <button class="modal-arrow modal-arrow-left" id="modal-prev-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="modal-arrow modal-arrow-right" id="modal-next-btn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="modal-dots" id="modal-dots"></div>
+                    <div class="modal-visual-gradient"></div>
+                </div>
+                <!-- Zona Informativa -->
+                <div class="modal-info">
+                    <span id="modal-project-category" class="badge">Categoría</span>
+                    <h3 id="modal-project-title">Título del Proyecto</h3>
+                    
+                    <div class="modal-meta-grid">
+                        <div class="meta-item">
+                            <span class="meta-label">Año</span>
+                            <strong id="modal-project-year">-</strong>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Mi Rol</span>
+                            <strong id="modal-project-role">-</strong>
+                        </div>
+                    </div>
+
+                    <div class="modal-details-scroll">
+                        <div class="modal-detail-section">
+                            <h4><i class="fa-solid fa-bullseye text-gradient"></i> Objetivo</h4>
+                            <p id="modal-project-objective">-</p>
+                        </div>
+                        
+                        <div class="modal-detail-section">
+                            <h4><i class="fa-solid fa-triangle-exclamation text-gradient"></i> Desafío</h4>
+                            <p id="modal-project-challenge">-</p>
+                        </div>
+                        
+                        <div class="modal-detail-section">
+                            <h4><i class="fa-solid fa-lightbulb text-gradient"></i> Solución</h4>
+                            <p id="modal-project-solution">-</p>
+                        </div>
+
+                        <div class="modal-detail-section">
+                            <h4><i class="fa-solid fa-screwdriver-wrench text-gradient"></i> Herramientas</h4>
+                            <div id="modal-project-tools" class="project-tech-tags"></div>
+                        </div>
+
+                        <div class="modal-detail-section">
+                            <h4><i class="fa-solid fa-gift text-gradient"></i> Entregables</h4>
+                            <ul id="modal-project-deliverables" class="deliverables-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- CTA del Modal directo a WhatsApp -->
+                    <div class="modal-actions">
+                        <a href="" id="modal-whatsapp-btn" target="_blank" class="btn btn-primary btn-whatsapp-modal">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar proyecto similar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lógica de Interactividad JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
