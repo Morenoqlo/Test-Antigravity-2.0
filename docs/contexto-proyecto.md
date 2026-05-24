@@ -10,7 +10,8 @@
 **Ruta local:** `C:\Users\alexa\Downloads\Test Antigravity 2.0`  
 **Stack:** Vanilla HTML5 / CSS3 / JS (ES6) — sin frameworks  
 **Servidor local:** `npx serve . -p 3001` — config en `.claude/launch.json`  
-**Sin repositorio git** — no hacer commits
+**Sin repositorio git** — no hacer commits  
+**Producción:** Desplegado en Vercel (sitio en vivo)
 
 **Especialidad del cliente:** Diseño gráfico, identidad visual, packaging, dirección de arte, empaque de marca. Ubicado en Antofagasta, Chile. Servicios remotos a nivel mundial.
 
@@ -20,12 +21,12 @@
 
 ### Secciones (en orden)
 1. **Navbar** — Logo 70px, links: Sobre Mí / Proyectos / Trayectoria / Especialidad / Contacto
-2. **Hero** — Badge "Disponible para nuevos proyectos", h1, subtítulo, 2 CTAs (WhatsApp + Ver proyectos), tarjeta proceso creativo (4 pasos)
-3. **About** — "El Creativo Detrás de Adesign"
-4. **Projects** — Grid 8 tarjetas con modal/carousel, filtros por categoría
+2. **Hero** — Badge "Disponible para nuevos proyectos", h1, subtítulo, 2 CTAs (WhatsApp + Ver proyectos), tarjeta proceso creativo (4 pasos), stats (Real / 3D / IA+Web)
+3. **About** — "El Creativo Detrás del Diseño"
+4. **Projects** — Grid 8 tarjetas con modal/carousel, filtros por categoría. Modal enriquecido: Objetivo, Desafío, Solución, Herramientas, Entregables
 5. **Experience** — Timeline 5 items (badge + título = "Experiencia")
 6. **Skills** — 3 cards (Avanzado / Intermedio / En Desarrollo)
-7. **Contact** — 3 métodos: WhatsApp, Email, Ubicación
+7. **Contact** — 3 métodos: WhatsApp, Email, Ubicación + formulario Formspree (⚠️ ID sin configurar)
 8. **Footer** — Logo 80px, 3 columnas
 
 ### Paleta de marca
@@ -59,6 +60,14 @@
 **Fixes adicionales**
 - Section badge "Trayectoria" → "Experiencia" (consistencia con el h2)
 - `.method-item i`: `min-width: 48px; flex-shrink: 0` — fix definitivo para que Font Awesome no rompa el círculo al aplicar font-size custom
+
+**V5 — Cambios de Antigravity (sesión posterior)**
+- Hero stats: sección nueva debajo de los CTAs con 3 items (Real / 3D / IA+Web)
+- About title: "El Creativo Detrás de Adesign" → "El Creativo Detrás del Diseño"
+- Modal enriquecido: agregadas secciones Solución, Herramientas (tech-tags), Entregables (lista con ✓) + scroll interno
+- Formulario de contacto completo (`contact-form`) en sección Contacto con integración Formspree — ⚠️ FORMSPREE_ID es placeholder `'TU_ID_DE_FORMSPREE'`, hay que reemplazarlo en `js/app.js` línea 613
+- Datos de proyectos enriquecidos: todos los proyectos en `projectsData` ahora tienen `solution`, `tools[]`, `deliverables[]`
+- CSS nuevo: `.hero-stats`, `.stat-item`, `.stat-number`, `.contact-form`, `.form-group`, `.deliverables-list`, `.btn-whatsapp-modal`, `.modal-details-scroll`, `.modal-detail-section`
 
 ---
 
@@ -114,12 +123,15 @@ Ausente por completo. Genera tráfico orgánico y posiciona como experto.
 
 ## Roadmap de Mejoras Pendientes
 
+### Prioridad 0 — Fix urgente (formulario roto en producción)
+- [ ] **Configurar Formspree** — registrarse en formspree.io, crear form "Adesign Contacto", pegar ID en `js/app.js` línea 613 (variable `FORMSPREE_ID`)
+
 ### Prioridad 1 — Credibilidad (impacto inmediato en conversión)
-- [ ] **Testimonios** — Agregar sección con 2-3 testimonios reales de clientes (nombre, empresa, foto opcional, cita específica)
-- [ ] **Logos de clientes** — Banda o grid con logos de marcas/empresas con las que trabajó
+- [x] **Testimonios** — Sección "Clientes" agregada con 2 testimonios reales: Landyciss ("¡Te pasaste, mucha creatividad!") y Lo que no se Sube ("Aprobado por Chayanne"). Logos en `.testimonial-author`. ✓
+- [x] **Logos de clientes** — Banda "Marcas & proyectos reales" con Landyciss, Aguas Antofagasta, Lo que no se Sube, Vaiss. ✓
 
 ### Prioridad 2 — Profundidad de proyectos
-- [ ] **Case study mínimo** en al menos 2 proyectos — dentro del modal agregar: contexto/brief → proceso → resultado
+- [x] **Case study mínimo** en modal — Antigravity agregó Solución, Herramientas y Entregables a todos los proyectos ✓
 - [ ] **Año y categoría visible** en las tarjetas de proyecto (sin necesidad de abrir modal)
 - [ ] **Métricas** en los proyectos que las tengan (impacto, alcance, etc.)
 
@@ -143,6 +155,9 @@ Si se aplica `font-size` custom a un ícono FA6 dentro de `.method-item i` (que 
 
 ### Lupa magnifier (estado actual)
 La lupa rectangular (220×160px, zoom 3.5×) existe pero tiene una limitación fundamental: `object-fit: contain` en `#modal-project-img` hace que screenshots verticales (ej: Vaiss full page) se rendericen a ~150px de ancho dentro del modal. El zoom 3.5× sobre 150px sigue siendo poco útil. El problema no está en el zoom sino en el tamaño del canvas de la imagen. Solución definitiva requiere rediseñar el modal visual (cambiar el layout o la forma de mostrar la imagen).
+
+### Formspree — formulario de contacto
+El formulario usa `fetch` a `https://formspree.io/f/${FORMSPREE_ID}`. El ID está en `js/app.js` línea 613. Si el ID es el placeholder `'TU_ID_DE_FORMSPREE'`, el formulario muestra un error rojo al enviarlo. Para activarlo: crear cuenta en formspree.io → New Form → copiar el ID (8 chars, ej: `xpzgvkab`) → pegar en la línea 613.
 
 ### Colores off-brand eliminados
 En el CSS original de Gemini quedaron residuos de un tema anterior: violetas `rgba(139, 92, 246, x)` y teales `rgba(6, 182, 212, x)`. Todos fueron reemplazados por los colores de marca (amarillo/naranja). Si se regenera o modifica CSS, verificar que no reaparezcan.

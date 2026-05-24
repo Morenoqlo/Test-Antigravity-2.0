@@ -604,10 +604,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================
-       8. FORMULARIO DE CONTACTO PREMIUM
+       8. FORMULARIO DE CONTACTO PREMIUM CON FORMSPREE
        ========================================== */
     const contactForm = document.getElementById('contact-form');
     const formStatusMsg = document.getElementById('form-status-msg');
+    
+    // CONFIGURACIÓN: Regístrate gratis en https://formspree.io, crea un formulario y coloca tu ID aquí:
+    const FORMSPREE_ID = 'mwvzqzjo';
 
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -620,20 +623,57 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatusMsg.style.color = 'var(--text-secondary)';
         formStatusMsg.innerText = 'Procesando tu consulta en Adesign...';
 
-        setTimeout(() => {
+        // Si aún no se ha configurado el ID de Formspree, mostramos una advertencia amigable
+        if (FORMSPREE_ID === 'TU_ID_DE_FORMSPREE' || !FORMSPREE_ID) {
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                formStatusMsg.style.color = '#ef4444';
+                formStatusMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Error: Falta configurar el ID de Formspree en `js/app.js`. Revisa las instrucciones para activarlo en 1 minuto.';
+            }, 1000);
+            return;
+        }
+
+        const formData = new FormData(contactForm);
+
+        fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHTML;
-            
-            formStatusMsg.style.color = '#22c55e';
-            formStatusMsg.innerHTML = '<i class="fa-solid fa-circle-check"></i> ¡Mensaje enviado con éxito! También puedes hacer click en el botón superior de WhatsApp para una respuesta inmediata.';
-            
-            contactForm.reset();
-            
-            setTimeout(() => {
-                formStatusMsg.innerText = '';
-            }, 7000);
 
-        }, 1800);
+            if (response.ok) {
+                formStatusMsg.style.color = '#22c55e';
+                formStatusMsg.innerHTML = '<i class="fa-solid fa-circle-check"></i> ¡Mensaje enviado con éxito! Te responderé lo antes posible. También puedes usar WhatsApp para contacto directo.';
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    formStatusMsg.innerText = '';
+                }, 7000);
+            } else {
+                response.json().then(data => {
+                    if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
+                        formStatusMsg.style.color = '#ef4444';
+                        formStatusMsg.innerText = data.errors.map(error => error.message).join(", ");
+                    } else {
+                        formStatusMsg.style.color = '#ef4444';
+                        formStatusMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo.';
+                    }
+                });
+            }
+        })
+        .catch(error => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+            formStatusMsg.style.color = '#ef4444';
+            formStatusMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Error de conexión. Por favor, verifica tu internet e inténtalo de nuevo.';
+            console.error('Error al enviar a Formspree:', error);
+        });
     });
 
     /* ==========================================
